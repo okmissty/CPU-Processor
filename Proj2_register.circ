@@ -121,6 +121,10 @@
       <circ-port dir="out" pin="2200,950" x="200" y="120"/>
     </appear>
     <comp lib="0" loc="(170,660)" name="Constant"/>
+    <comp lib="0" loc="(2030,160)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="0" loc="(220,850)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="rd"/>
@@ -820,6 +824,7 @@
     <wire from="(2020,400)" to="(2020,820)"/>
     <wire from="(2020,400)" to="(2050,400)"/>
     <wire from="(2020,820)" to="(2050,820)"/>
+    <wire from="(2030,160)" to="(2050,160)"/>
     <wire from="(2030,190)" to="(2030,390)"/>
     <wire from="(2030,390)" to="(2030,810)"/>
     <wire from="(2030,390)" to="(2050,390)"/>
@@ -828,6 +833,7 @@
     <wire from="(2040,380)" to="(2040,800)"/>
     <wire from="(2040,380)" to="(2050,380)"/>
     <wire from="(2040,800)" to="(2050,800)"/>
+    <wire from="(2050,160)" to="(2050,370)"/>
     <wire from="(2070,1110)" to="(2070,1120)"/>
     <wire from="(2070,1120)" to="(2220,1120)"/>
     <wire from="(2070,690)" to="(2070,700)"/>
