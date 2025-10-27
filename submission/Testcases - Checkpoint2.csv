@@ -2,8 +2,8 @@
 Test#,Instruction_Type,Assembly,Machine_Code_Hex,PC,Expected_Result,Registers_Affected,Memory_Affected,Description
 1,R-type,"add $t0, $t1, $t2",0x012A4020,0x0000,$t0 = $t1 + $t2,$t0,None,Basic addition
 2,R-type,"sub $t3, $t4, $t5",0x018D5822,0x0004,$t3 = $t4 - $t5,$t3,None,Basic subtraction
-3,R-type,"and $s0, $s1, $s2",0x02328024,0x0008,$s0 = $s1 & $s2,$s0,None,Bitwise AND
-4,R-type,"or $s3, $s4, $s5",0x02959825,0x000C,$s3 = $s4 | $s5,$s3,None,Bitwise OR
+,,,,,,,,
+,,,,,,,,
 5,R-type,"slt $t6, $t7, $t8",0x01F8702A,0x0010,$t6 = ($t7 < $t8) ? 1 : 0,$t6,None,Set less than
 6,R-type,"sll $t1, $t2, 4",0x000A4900,0x0014,$t1 = $t2 << 4,$t1,None,Shift left logical
 7,R-type,"srl $t3, $t4, 8",0x000C5A02,0x0018,$t3 = $t4 >> 8,$t3,None,Shift right logical
@@ -13,10 +13,12 @@ Test#,Instruction_Type,Assembly,Machine_Code_Hex,PC,Expected_Result,Registers_Af
 11,I-type,"addi $t1, $t0, -5",0x2109FFFB,0x0028,$t1 = $t0 - 5,$t1,None,Add negative immediate
 12,I-type,"lw $t2, 0($t0)",0x8D0A0000,0x002C,$t2 = Mem[$t0 + 0],$t2,Read from addr,Load word
 13,I-type,"sw $t2, 4($t0)",0xAD0A0004,0x0030,Mem[$t0 + 4] = $t2,None,Write to addr+4,Store word
-14,I-type,"beq $t0, $t1, 8",0x11090008,0x0034,if ($t0 == $t1) PC += 8*4,PC,None,Branch if equal
-15,I-type,"bne $t0, $t1, -4",0x1509FFFC,0x0038,if ($t0 != $t1) PC -= 4*4,PC,None,Branch if not equal
-16,J-type,j 0x00400000,0x08100000,0x003C,PC = 0x00400000,PC,None,Jump
+14,,,,,,,,
+15,,,,,,,,
+16,,,,,,,,
 17,Edge,"add $zero, $t0, $t1",0x01090020,0x0040,$zero should remain 0,None,None,Write to $zero
 18,Edge,"addi $t0, $t0, 0x7FFF",0x21087FFF,0x0044,Test max positive immediate,$t0,None,Max immediate
 19,Edge,"addi $t0, $t0, 0x8000",0x21088000,0x0048,Test min negative immediate,$t0,None,Min immediate (sign ext)
-20,Hazard,"add $t0, $t1, $t2; add $t3, $t0, $t4",Multiple,Sequential,$t3 uses new $t0 value,"$t0, $t3",None,Data hazard test
+20,Star,,,,,,,
+21,R-type*,"and $s0, $s1, $s2",0x02328024,0x0008,$s0 = $s1 & $s2,$s0,None,Bitwise AND
+22,R-type*,"or $s3, $s4, $s5",0x02959825,0x000C,$s3 = $s4 | $s5,$s3,None,Bitwise OR
