@@ -116,9 +116,53 @@
     <comp lib="2" loc="(1190,770)" name="Multiplexer">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="8" loc="(566,149)" name="Text">
+    <comp lib="8" loc="(1009,326)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="imm val"/>
+    </comp>
+    <comp lib="8" loc="(1038,306)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="use imm?"/>
+    </comp>
+    <comp lib="8" loc="(1057,286)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="rt register"/>
+    </comp>
+    <comp lib="8" loc="(1079,266)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="rd register"/>
+    </comp>
+    <comp lib="8" loc="(1101,246)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="rs register"/>
+    </comp>
+    <comp lib="8" loc="(1120,832)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="only =1 if it is operating with an imm, otherwise operate with rt_data"/>
+    </comp>
+    <comp lib="8" loc="(565,145)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Tyeon Ford and Andy Quach"/>
+    </comp>
+    <comp lib="8" loc="(590,284)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="2008000c"/>
+    </comp>
+    <comp lib="8" loc="(646,843)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="data from specified rd register"/>
+    </comp>
+    <comp lib="8" loc="(717,589)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="only write enable if the instruction should"/>
+    </comp>
+    <comp lib="8" loc="(844,716)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="data from specified rs register"/>
+    </comp>
+    <comp lib="8" loc="(845,753)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="data from specified rt register"/>
     </comp>
     <comp loc="(1350,740)" name="ALU"/>
     <comp loc="(760,720)" name="regfile"/>
@@ -414,6 +458,38 @@
     <comp lib="8" loc="(195,65)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Tyeon Ford and Andy Quach"/>
+    </comp>
+    <comp lib="8" loc="(2160,360)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="zero register should always output 0"/>
+    </comp>
+    <comp lib="8" loc="(2221,920)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="Reads the data from a specific register"/>
+    </comp>
+    <comp lib="8" loc="(2223,508)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="Reads the data from a specific source register"/>
+    </comp>
+    <comp lib="8" loc="(311,483)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="(can't write to zero register since it should be constant)"/>
+    </comp>
+    <comp lib="8" loc="(322,468)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="To decide which register to write data to"/>
+    </comp>
+    <comp lib="8" loc="(466,208)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="Will only write to a register if the instruction should at all"/>
+    </comp>
+    <comp lib="8" loc="(471,226)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="and if that register is specifically chosen"/>
+    </comp>
+    <comp lib="8" loc="(619,105)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="The data that will be written to a register"/>
     </comp>
     <wire from="(1000,1050)" to="(1000,1090)"/>
     <wire from="(1000,1050)" to="(1010,1050)"/>
@@ -1499,19 +1575,19 @@
     </comp>
     <comp lib="8" loc="(630,705)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="AND (2)"/>
+      <a name="text" val="AND"/>
     </comp>
     <comp lib="8" loc="(630,775)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="OR (2)"/>
+      <a name="text" val="OR"/>
     </comp>
     <comp lib="8" loc="(640,920)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="XOR (2)"/>
+      <a name="text" val="XOR"/>
     </comp>
     <comp lib="8" loc="(645,845)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="NOR (2)"/>
+      <a name="text" val="NOR"/>
     </comp>
     <comp lib="8" loc="(670,645)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
@@ -2234,121 +2310,245 @@
     <comp lib="3" loc="(960,920)" name="Adder">
       <a name="width" val="4"/>
     </comp>
-    <comp lib="8" loc="(121,285)" name="Text">
+    <comp lib="8" loc="(1079,756)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 1 = 0001"/>
+    </comp>
+    <comp lib="8" loc="(1084,881)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 2 = 0010"/>
+    </comp>
+    <comp lib="8" loc="(1085,1015)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 3 = 0011"/>
+    </comp>
+    <comp lib="8" loc="(1085,2312)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 13 = 1101"/>
+    </comp>
+    <comp lib="8" loc="(1086,1532)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 7 = 0111"/>
+    </comp>
+    <comp lib="8" loc="(1086,632)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 0 = 0000"/>
+    </comp>
+    <comp lib="8" loc="(1087,1144)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 4 = 0100"/>
+    </comp>
+    <comp lib="8" loc="(1087,1402)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 6 = 0110"/>
+    </comp>
+    <comp lib="8" loc="(1087,1663)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 8 = 1000"/>
+    </comp>
+    <comp lib="8" loc="(1087,1923)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 10 = 1010"/>
+    </comp>
+    <comp lib="8" loc="(1087,2581)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 15 = 1111"/>
+    </comp>
+    <comp lib="8" loc="(1088,1274)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 5 = 0101 "/>
+    </comp>
+    <comp lib="8" loc="(1088,2053)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 11 = 1011"/>
+    </comp>
+    <comp lib="8" loc="(1088,2181)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 12 = 1100"/>
+    </comp>
+    <comp lib="8" loc="(1088,2452)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 14 = 1110"/>
+    </comp>
+    <comp lib="8" loc="(1089,373)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="else (I-type), rt -&gt; rd"/>
+    </comp>
+    <comp lib="8" loc="(1090,1793)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="= 9 = 1001"/>
+    </comp>
+    <comp lib="8" loc="(1094,605)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="ALU CODES:"/>
+    </comp>
+    <comp lib="8" loc="(1095,356)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="if R-type, rd -&gt; rd"/>
+    </comp>
+    <comp lib="8" loc="(118,267)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="rt: 20-16"/>
     </comp>
-    <comp lib="8" loc="(123,263)" name="Text">
-      <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="rd: 15-11"/>
-    </comp>
-    <comp lib="8" loc="(124,305)" name="Text">
+    <comp lib="8" loc="(119,282)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="rs: 25-21"/>
     </comp>
-    <comp lib="8" loc="(128,218)" name="Text">
+    <comp lib="8" loc="(120,251)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="rd: 15-11"/>
+    </comp>
+    <comp lib="8" loc="(125,221)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Funct: 5-0 "/>
     </comp>
-    <comp lib="8" loc="(129,240)" name="Text">
+    <comp lib="8" loc="(128,235)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="shamt: 10-6"/>
     </comp>
-    <comp lib="8" loc="(133,327)" name="Text">
+    <comp lib="8" loc="(129,393)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="2008000c"/>
+    </comp>
+    <comp lib="8" loc="(135,299)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Opcode: 31-26"/>
+    </comp>
+    <comp lib="8" loc="(1418,2404)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="if addi, ori, or xori, then use imm."/>
     </comp>
     <comp lib="8" loc="(1445,720)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Final ALU code"/>
     </comp>
-    <comp lib="8" loc="(1506,521)" name="Text">
+    <comp lib="8" loc="(1505,520)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Generates reg_write_e"/>
     </comp>
-    <comp lib="8" loc="(190,186)" name="Text">
+    <comp lib="8" loc="(173,192)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Tyeon Ford and Andy Quach"/>
     </comp>
-    <comp lib="8" loc="(374,424)" name="Text">
+    <comp lib="8" loc="(1745,598)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="writes unless its mult or div"/>
+    </comp>
+    <comp lib="8" loc="(370,420)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="checks if opcode is 0"/>
     </comp>
-    <comp lib="8" loc="(427,383)" name="Text">
+    <comp lib="8" loc="(425,380)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="R-type"/>
     </comp>
-    <comp lib="8" loc="(639,1409)" name="Text">
+    <comp lib="8" loc="(524,624)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="sll"/>
+      <a name="text" val="imm1 or funct"/>
+    </comp>
+    <comp lib="8" loc="(536,534)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="imm2 or shamt"/>
+    </comp>
+    <comp lib="8" loc="(545,453)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="imm3 or rd"/>
+    </comp>
+    <comp lib="8" loc="(636,545)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="shamt=0"/>
+    </comp>
+    <comp lib="8" loc="(637,445)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="rd"/>
+    </comp>
+    <comp lib="8" loc="(638,532)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="if R-type,"/>
+    </comp>
+    <comp lib="8" loc="(639,1405)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="sll (R)"/>
     </comp>
     <comp lib="8" loc="(640,1010)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="div"/>
+      <a name="text" val="div (R)"/>
     </comp>
-    <comp lib="8" loc="(640,1139)" name="Text">
+    <comp lib="8" loc="(640,1536)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="mfhi"/>
+      <a name="text" val="srl (R)"/>
     </comp>
-    <comp lib="8" loc="(641,1661)" name="Text">
+    <comp lib="8" loc="(640,1920)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="slt"/>
+      <a name="text" val="or (R)"/>
     </comp>
-    <comp lib="8" loc="(641,1791)" name="Text">
+    <comp lib="8" loc="(640,2050)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="and"/>
+      <a name="text" val="xor (R)"/>
     </comp>
-    <comp lib="8" loc="(641,1921)" name="Text">
+    <comp lib="8" loc="(640,2190)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="or"/>
+      <a name="text" val="nor (R)"/>
     </comp>
-    <comp lib="8" loc="(641,2051)" name="Text">
+    <comp lib="8" loc="(640,2320)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="xor"/>
+      <a name="text" val="addi (I)"/>
     </comp>
-    <comp lib="8" loc="(642,2194)" name="Text">
+    <comp lib="8" loc="(640,2460)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="nor"/>
+      <a name="text" val="ori (I)"/>
     </comp>
-    <comp lib="8" loc="(642,2324)" name="Text">
+    <comp lib="8" loc="(640,2590)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="addi"/>
+      <a name="text" val="xori (I)"/>
     </comp>
-    <comp lib="8" loc="(642,2464)" name="Text">
+    <comp lib="8" loc="(640,755)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="ori"/>
+      <a name="text" val="sub (R)"/>
     </comp>
-    <comp lib="8" loc="(642,2594)" name="Text">
+    <comp lib="8" loc="(642,1143)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="xori"/>
+      <a name="text" val="mfhi (R)"/>
     </comp>
-    <comp lib="8" loc="(642,755)" name="Text">
+    <comp lib="8" loc="(642,1277)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="sub"/>
+      <a name="text" val="mflo (R)"/>
     </comp>
-    <comp lib="8" loc="(645,1272)" name="Text">
+    <comp lib="8" loc="(642,1665)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="mflo"/>
+      <a name="text" val="slt (R)"/>
     </comp>
-    <comp lib="8" loc="(645,1535)" name="Text">
+    <comp lib="8" loc="(642,1798)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="srl"/>
+      <a name="text" val="and (R)"/>
     </comp>
-    <comp lib="8" loc="(646,888)" name="Text">
+    <comp lib="8" loc="(645,425)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="mult"/>
+      <a name="text" val="imm3"/>
     </comp>
-    <comp lib="8" loc="(649,629)" name="Text">
+    <comp lib="8" loc="(645,625)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="add"/>
+      <a name="text" val="add (R)"/>
     </comp>
-    <comp lib="8" loc="(873,604)" name="Text">
+    <comp lib="8" loc="(645,885)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="mult (R)"/>
+    </comp>
+    <comp lib="8" loc="(870,600)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="in binary based on the instruction"/>
     </comp>
-    <comp lib="8" loc="(895,581)" name="Text">
+    <comp lib="8" loc="(883,456)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="if not R-type,"/>
+    </comp>
+    <comp lib="8" loc="(895,580)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Everything below this is generating the instruction's code"/>
+    </comp>
+    <comp lib="8" loc="(904,472)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="must be I-type or J-type, so gather imm bits"/>
     </comp>
     <wire from="(1020,350)" to="(1020,360)"/>
     <wire from="(1020,360)" to="(1040,360)"/>
