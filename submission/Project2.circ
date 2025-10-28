@@ -144,13 +144,21 @@
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Tyeon Ford and Andy Quach"/>
     </comp>
+    <comp lib="8" loc="(644,375)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="012a4020"/>
+    </comp>
     <comp lib="8" loc="(645,840)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="data from specified rd register"/>
     </comp>
+    <comp lib="8" loc="(651,326)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="200afffe"/>
+    </comp>
     <comp lib="8" loc="(655,275)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="012a4020"/>
+      <a name="text" val="2009000a"/>
     </comp>
     <comp lib="8" loc="(715,585)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
@@ -2149,6 +2157,10 @@
       <a name="size" val="30"/>
     </comp>
     <comp lib="1" loc="(670,1520)" name="NOT Gate"/>
+    <comp lib="1" loc="(670,510)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="width" val="5"/>
+    </comp>
     <comp lib="1" loc="(790,1500)" name="AND Gate"/>
     <comp lib="1" loc="(790,1870)" name="OR Gate">
       <a name="size" val="30"/>
@@ -2540,14 +2552,6 @@
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="rd"/>
     </comp>
-    <comp lib="8" loc="(635,530)" name="Text">
-      <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="if R-type,"/>
-    </comp>
-    <comp lib="8" loc="(635,545)" name="Text">
-      <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="shamt=0"/>
-    </comp>
     <comp lib="8" loc="(640,1010)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="div (R)"/>
@@ -2615,6 +2619,14 @@
     <comp lib="8" loc="(880,455)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="if not R-type,"/>
+    </comp>
+    <comp lib="8" loc="(881,526)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="if R-type,"/>
+    </comp>
+    <comp lib="8" loc="(881,541)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="shamt=0"/>
     </comp>
     <comp lib="8" loc="(895,580)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
@@ -2858,7 +2870,8 @@
     <wire from="(610,2370)" to="(680,2370)"/>
     <wire from="(610,430)" to="(810,430)"/>
     <wire from="(610,450)" to="(690,450)"/>
-    <wire from="(610,510)" to="(700,510)"/>
+    <wire from="(610,510)" to="(630,510)"/>
+    <wire from="(610,530)" to="(620,530)"/>
     <wire from="(610,620)" to="(610,670)"/>
     <wire from="(610,670)" to="(610,800)"/>
     <wire from="(610,670)" to="(680,670)"/>
@@ -2866,8 +2879,12 @@
     <wire from="(610,800)" to="(680,800)"/>
     <wire from="(610,930)" to="(610,1060)"/>
     <wire from="(610,930)" to="(680,930)"/>
+    <wire from="(620,520)" to="(620,530)"/>
+    <wire from="(620,520)" to="(640,520)"/>
     <wire from="(630,350)" to="(630,390)"/>
     <wire from="(630,390)" to="(670,390)"/>
+    <wire from="(630,500)" to="(630,510)"/>
+    <wire from="(630,500)" to="(640,500)"/>
     <wire from="(640,320)" to="(1030,320)"/>
     <wire from="(640,340)" to="(850,340)"/>
     <wire from="(650,1040)" to="(680,1040)"/>
@@ -2892,6 +2909,7 @@
     <wire from="(670,350)" to="(670,380)"/>
     <wire from="(670,380)" to="(670,390)"/>
     <wire from="(670,380)" to="(790,380)"/>
+    <wire from="(670,510)" to="(700,510)"/>
     <wire from="(670,530)" to="(670,600)"/>
     <wire from="(670,530)" to="(720,530)"/>
     <wire from="(690,360)" to="(690,450)"/>
