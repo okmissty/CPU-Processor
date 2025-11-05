@@ -254,41 +254,41 @@
 </a>
       <a name="dataWidth" val="32"/>
     </comp>
-    <comp lib="8" loc="(1213,1131)" name="Text">
+    <comp lib="8" loc="(1210,1130)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="ALU"/>
     </comp>
-    <comp lib="8" loc="(1219,347)" name="Text">
+    <comp lib="8" loc="(1215,345)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Tyeon Ford and Andy Quach"/>
     </comp>
-    <comp lib="8" loc="(1255,1151)" name="Text">
+    <comp lib="8" loc="(1255,1150)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="MEM"/>
     </comp>
-    <comp lib="8" loc="(1353,830)" name="Text">
+    <comp lib="8" loc="(1350,830)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="PC + 4"/>
     </comp>
-    <comp lib="8" loc="(1414,815)" name="Text">
+    <comp lib="8" loc="(1410,815)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="jal/jalr"/>
     </comp>
-    <comp lib="8" loc="(1451,463)" name="Text">
+    <comp lib="8" loc="(1450,1255)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="value from memory"/>
+    </comp>
+    <comp lib="8" loc="(1450,460)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="20080003"/>
     </comp>
-    <comp lib="8" loc="(1451,483)" name="Text">
+    <comp lib="8" loc="(1450,480)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="00084900"/>
     </comp>
-    <comp lib="8" loc="(1452,502)" name="Text">
+    <comp lib="8" loc="(1450,500)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="----"/>
-    </comp>
-    <comp lib="8" loc="(1453,1258)" name="Text">
-      <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="value from memory"/>
     </comp>
     <comp lib="8" loc="(1455,1180)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
@@ -306,7 +306,7 @@
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="data from specified rs register"/>
     </comp>
-    <comp lib="8" loc="(1739,442)" name="Text">
+    <comp lib="8" loc="(1735,440)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="== 1 if the two registers are equal"/>
     </comp>
@@ -334,15 +334,15 @@
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="only =1 if it is operating with an imm, otherwise operate with rt_data"/>
     </comp>
-    <comp lib="8" loc="(2006,840)" name="Text">
+    <comp lib="8" loc="(2005,840)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="only if sll or srl"/>
     </comp>
-    <comp lib="8" loc="(2008,852)" name="Text">
+    <comp lib="8" loc="(2005,850)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="move shamt"/>
     </comp>
-    <comp lib="8" loc="(2013,867)" name="Text">
+    <comp lib="8" loc="(2010,865)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="from 10:6 to 3:0 "/>
     </comp>
@@ -354,35 +354,35 @@
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="srl"/>
     </comp>
-    <comp lib="8" loc="(362,872)" name="Text">
+    <comp lib="8" loc="(360,870)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="offset: word addressed"/>
     </comp>
-    <comp lib="8" loc="(533,641)" name="Text">
+    <comp lib="8" loc="(530,640)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="PC + 4"/>
     </comp>
-    <comp lib="8" loc="(545,773)" name="Text">
+    <comp lib="8" loc="(545,770)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="PC + 4 + Offset"/>
     </comp>
-    <comp lib="8" loc="(592,882)" name="Text">
+    <comp lib="8" loc="(590,880)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="jr/jalr"/>
     </comp>
-    <comp lib="8" loc="(727,653)" name="Text">
+    <comp lib="8" loc="(725,650)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="any j*"/>
     </comp>
-    <comp lib="8" loc="(845,1469)" name="Text">
+    <comp lib="8" loc="(845,1465)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="immediate"/>
     </comp>
-    <comp lib="8" loc="(856,1338)" name="Text">
+    <comp lib="8" loc="(855,1335)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="rs_data"/>
     </comp>
-    <comp lib="8" loc="(923,1287)" name="Text">
+    <comp lib="8" loc="(920,1285)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="label to jump to"/>
     </comp>
@@ -2969,7 +2969,7 @@
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="imm3 or rd"/>
     </comp>
-    <comp lib="8" loc="(553,172)" name="Text">
+    <comp lib="8" loc="(550,170)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="REWIRE"/>
     </comp>
