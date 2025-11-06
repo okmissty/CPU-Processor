@@ -381,7 +381,7 @@
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="bne/beq"/>
     </comp>
-    <comp lib="8" loc="(725,650)" name="Text">
+    <comp lib="8" loc="(737,652)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="any j*"/>
     </comp>
@@ -404,6 +404,8 @@
     <wire from="(1110,1230)" to="(1180,1230)"/>
     <wire from="(1110,1260)" to="(1120,1260)"/>
     <wire from="(1130,550)" to="(1180,550)"/>
+    <wire from="(1150,460)" to="(1150,500)"/>
+    <wire from="(1150,500)" to="(1990,500)"/>
     <wire from="(1160,1260)" to="(1170,1260)"/>
     <wire from="(1170,1260)" to="(1170,1300)"/>
     <wire from="(1180,550)" to="(1180,1230)"/>
@@ -461,7 +463,6 @@
     <wire from="(1730,1070)" to="(1730,1100)"/>
     <wire from="(1730,1070)" to="(1750,1070)"/>
     <wire from="(1730,1100)" to="(1970,1100)"/>
-    <wire from="(1750,750)" to="(1760,750)"/>
     <wire from="(1760,1080)" to="(1760,1250)"/>
     <wire from="(1760,1250)" to="(2320,1250)"/>
     <wire from="(1760,550)" to="(1950,550)"/>
@@ -472,14 +473,17 @@
     <wire from="(1760,650)" to="(1820,650)"/>
     <wire from="(1760,670)" to="(2100,670)"/>
     <wire from="(1760,690)" to="(1800,690)"/>
-    <wire from="(1760,730)" to="(2260,730)"/>
-    <wire from="(1760,810)" to="(1790,810)"/>
-    <wire from="(1760,830)" to="(1810,830)"/>
+    <wire from="(1760,710)" to="(2260,710)"/>
+    <wire from="(1760,730)" to="(1790,730)"/>
+    <wire from="(1760,750)" to="(1810,750)"/>
+    <wire from="(1760,770)" to="(1830,770)"/>
     <wire from="(1780,1060)" to="(2000,1060)"/>
-    <wire from="(1790,370)" to="(1790,810)"/>
+    <wire from="(1790,370)" to="(1790,730)"/>
     <wire from="(1800,690)" to="(1800,900)"/>
-    <wire from="(1810,490)" to="(1810,830)"/>
+    <wire from="(1810,490)" to="(1810,750)"/>
     <wire from="(1820,650)" to="(1820,940)"/>
+    <wire from="(1830,760)" to="(1830,770)"/>
+    <wire from="(1830,760)" to="(1990,760)"/>
     <wire from="(1840,1130)" to="(1840,1480)"/>
     <wire from="(1840,1130)" to="(1900,1130)"/>
     <wire from="(1840,630)" to="(1840,770)"/>
@@ -498,6 +502,7 @@
     <wire from="(1960,1120)" to="(1970,1120)"/>
     <wire from="(1970,820)" to="(1980,820)"/>
     <wire from="(1980,1130)" to="(1980,1160)"/>
+    <wire from="(1990,500)" to="(1990,760)"/>
     <wire from="(2000,1050)" to="(2000,1060)"/>
     <wire from="(2000,1050)" to="(2040,1050)"/>
     <wire from="(2000,1110)" to="(2020,1110)"/>
@@ -528,7 +533,7 @@
     <wire from="(2230,900)" to="(2260,900)"/>
     <wire from="(2230,940)" to="(2230,960)"/>
     <wire from="(2230,940)" to="(2260,940)"/>
-    <wire from="(2260,580)" to="(2260,730)"/>
+    <wire from="(2260,580)" to="(2260,710)"/>
     <wire from="(2260,580)" to="(2640,580)"/>
     <wire from="(2310,920)" to="(2320,920)"/>
     <wire from="(2320,780)" to="(2320,920)"/>
@@ -589,7 +594,8 @@
     <wire from="(670,710)" to="(670,740)"/>
     <wire from="(670,740)" to="(710,740)"/>
     <wire from="(690,690)" to="(760,690)"/>
-    <wire from="(710,660)" to="(710,740)"/>
+    <wire from="(710,460)" to="(1150,460)"/>
+    <wire from="(710,460)" to="(710,740)"/>
     <wire from="(740,510)" to="(750,510)"/>
     <wire from="(750,730)" to="(760,730)"/>
     <wire from="(790,500)" to="(800,500)"/>
@@ -3285,11 +3291,11 @@
     </comp>
     <comp lib="8" loc="(640,2720)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="bne "/>
+      <a name="text" val="bne (I)"/>
     </comp>
     <comp lib="8" loc="(640,2860)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="beq "/>
+      <a name="text" val="beq (I) "/>
     </comp>
     <comp lib="8" loc="(640,755)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
@@ -3309,19 +3315,19 @@
     </comp>
     <comp lib="8" loc="(650,3020)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="j"/>
+      <a name="text" val="j (j)"/>
     </comp>
     <comp lib="8" loc="(650,3150)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="jal"/>
+      <a name="text" val="jal (j)"/>
     </comp>
     <comp lib="8" loc="(650,3290)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="jr"/>
+      <a name="text" val="jr (R)"/>
     </comp>
     <comp lib="8" loc="(650,3420)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="jalr"/>
+      <a name="text" val="jalr (R)"/>
     </comp>
     <comp lib="8" loc="(870,600)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
